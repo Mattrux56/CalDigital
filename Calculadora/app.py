@@ -14,11 +14,16 @@ def index():
 def convertir():
     data = request.get_json()
 
-    numero = str(data.get("numero", "")).strip()
-    base = int(data.get("base", 10))
-    bits = int(data.get("bits", 8))
-
     try:
+        numero = str(data.get("numero", "")).strip()
+        base = data.get("base", 10)
+        bits = data.get("bits", 8)
+
+        if type(base) is not int or base not in (2, 8, 10, 16):
+            raise ValueError("Base no soportada.")
+        if type(bits) is not int or bits not in (8, 16, 32, 64):
+            raise ValueError("Tamaño de palabra no soportado.")
+
         validar_entrada(numero, base)
         decimal = obtener_decimal(numero, base)
 
@@ -46,14 +51,17 @@ def convertir():
 def alu():
     data = request.get_json()
 
-    a = str(data.get("a", "")).strip()
-    b = str(data.get("b", "")).strip()
-    bits = int(data.get("bits", 8))
-
     try:
+        a = str(data.get("a", "")).strip()
+        b = str(data.get("b", "")).strip()
+        bits = data.get("bits", 8)
+
+        if type(bits) is not int or bits not in (8, 16, 32, 64):
+            raise ValueError("Tamaño de palabra no soportado.")
+
         resultado = operaciones_alu(a, b, bits)
         return jsonify({"ok": True, "resultados": resultado})
-    except ValueError as e:
+    except (TypeError, ValueError) as e:
         return jsonify({"ok": False, "error": str(e)}), 400
 
 
