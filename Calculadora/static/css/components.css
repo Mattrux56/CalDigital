@@ -1,0 +1,155 @@
+calculator-card {
+    display: block;
+    padding: 28px;
+    margin-bottom: 24px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: rgba(18, 27, 42, .88);
+}
+
+.section-title {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.section-title > span {
+    padding: 8px 10px;
+    border-radius: 7px;
+    color: var(--accent);
+    background: rgba(94, 234, 212, .12);
+    font-weight: bold;
+}
+
+h2 {
+    margin-bottom: 5px;
+    font-size: 23px;
+}
+
+.section-title p:last-child {
+    color: var(--muted);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 16px;
+}
+
+.alu-inputs {
+    grid-template-columns: 1fr 1fr;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    color: #b6bfd2;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    border: 1px solid #304058;
+    border-radius: 9px;
+    color: #edf1fa;
+    background: var(--surface);
+}
+
+input:focus,
+select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(94, 234, 212, .12);
+}
+
+.primary-button {
+    margin-top: 20px;
+    padding: 14px 24px;
+    border-radius: 9px;
+    color: white;
+    background: var(--accent-strong);
+    font-weight: bold;
+}
+
+.primary-button:hover {
+    background: #0d9488;
+}
+
+.results-grid,
+.alu-results {
+    display: grid;
+    gap: 15px;
+}
+
+.results-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.alu-results {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+}
+
+result-tile {
+    display: block;
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid #28334d;
+    border-radius: 9px;
+    background: var(--surface);
+}
+
+result-tile span {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+result-tile strong {
+    display: block;
+    color: var(--ink);
+    font-family: Consolas, monospace;
+    font-size: 20px;
+    word-break: break-all;
+}
+
+.mensaje {
+    min-height: 20px;
+    margin-top: 15px;
+    color: var(--danger);
+    font-size: 14px;
+}
+
+@media (max-width: 900px) {
+    .form-grid,
+    .results-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-grid .field:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 520px) {
+    calculator-card {
+        padding: 20px;
+    }
+
+    .form-grid,
+    .results-grid,
+    .alu-inputs,
+    .alu-results {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor de Conversion y ALU</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <p class="eyebrow">ELECTRONICA DIGITAL</p>
+        <h1>Motor de Conversion</h1>
+        <p class="subtitle">Bases numericas y aritmetica de bajo nivel</p>
+    </div>
+</header>
+
+<div class="app-shell">
+    <aside class="sidebar" aria-label="Herramientas">
+        <p class="sidebar-title">Herramientas</p>
+        <nav class="sidebar-nav" role="tablist" aria-label="Tipo de calculo">
+            <button class="nav-button is-active" type="button" role="tab"
+                aria-selected="true" data-view-target="conversion-view">
+                <span class="nav-number">01</span>
+                <span class="nav-copy">Conversion<small>Multibase</small></span>
+            </button>
+            <button class="nav-button" type="button" role="tab"
+                aria-selected="false" data-view-target="alu-view">
+                <span class="nav-number">02</span>
+                <span class="nav-copy">ALU<small>Operaciones logicas</small></span>
+            </button>
+        </nav>
+    </aside>
+    <main>
+        <conversion-view></conversion-view>
+        <alu-view></alu-view>
+    </main>
+</div>
+
+<footer>
+    <p>Proyecto de Electronica Digital · Motor de Conversion de Bases y ALU</p>
+</footer>
+
+<script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
