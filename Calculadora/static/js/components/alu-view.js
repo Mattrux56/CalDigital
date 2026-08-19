@@ -3,7 +3,7 @@ export class AluView extends HTMLElement {
         this.id = "alu-view";
         this.classList.add("tool-view");
         this.innerHTML = `
-            <calculator-card data-number="03" data-eyebrow="Procesador"
+            <calculator-card data-number="2" data-eyebrow="Procesador"
                 data-title="ALU - Operaciones Logicas"
                 data-description="Simulacion de operaciones bit a bit entre dos registros.">
                 <form id="alu-form">
