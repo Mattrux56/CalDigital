@@ -1,12 +1,12 @@
 .sidebar {
-    padding: 25px 16px;
-    border-right: 1px solid var(--line);
-    background: #0d1827;
+    padding: 28px 14px;
+    border-right: 2px solid var(--ink);
+    background: #202a31;
 }
 
 .sidebar-title {
     margin: 0 12px 18px;
-    color: var(--muted);
+    color: #aeb8b3;
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 1.5px;
@@ -25,19 +25,18 @@
     width: 100%;
     padding: 13px 12px;
     border: 1px solid transparent;
-    border-radius: 8px;
-    color: var(--muted);
+    border-radius: 2px;
+    color: #dbe2dc;
     background: transparent;
     text-align: left;
 }
 
 .nav-button:hover,
 .nav-button.is-active {
-    border-color: rgba(94, 234, 212, .25);
-    color: var(--ink);
-    background: rgba(94, 234, 212, .1);
+    border-color: #2a3841;
+    color: #000000;
+    background: #2a3841;
 }
-
 .nav-button:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 2px;
@@ -49,9 +48,9 @@
     height: 27px;
     flex: 0 0 27px;
     place-items: center;
-    border-radius: 6px;
-    color: var(--accent);
-    background: rgba(94, 234, 212, .12);
+    border-radius: 2px;
+    color: var(--ink);
+    background: var(--accent);
     font-size: 12px;
     font-weight: bold;
 }
@@ -62,8 +61,12 @@
 }
 
 .nav-copy small {
-    color: #64748b;
+    color: #91a09a;
     font-size: 11px;
+}
+
+.nav-button.is-active .nav-copy small {
+    color: #000000;
 }
 
 @media (max-width: 760px) {

@@ -18,7 +18,7 @@ def validar_entrada(numero, base):
     for caracter in numero:
         if caracter not in DIGITOS[:base]:
             raise ValueError(
-                f"El carácter '{caracter}' no es válido para la base {base}."
+                f"OVERFLOW: El carácter '{caracter}' no es válido para la base {base}."
             )
 
 

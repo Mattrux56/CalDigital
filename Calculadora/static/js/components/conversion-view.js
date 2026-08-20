@@ -3,7 +3,7 @@ export class ConversionView extends HTMLElement {
         this.id = "conversion-view";
         this.classList.add("tool-view", "is-active");
         this.innerHTML = `
-            <calculator-card data-number="1" data-eyebrow="Entrada"
+            <calculator-card data-number="01" data-eyebrow="Entrada"
                 data-title="Conversion Multibase"
                 data-description="Ingrese un numero y seleccione su sistema numerico.">
                 <form id="conversion-form">
@@ -35,7 +35,7 @@ export class ConversionView extends HTMLElement {
                     <div id="mensaje" class="mensaje" aria-live="polite"></div>
                 </form>
             </calculator-card>
-            <calculator-card data-number="2" data-eyebrow="Salida"
+            <calculator-card data-number="02" data-eyebrow="Salida"
                 data-title="Panel de Registros"
                 data-description="Resultado de la conversion en las cuatro bases principales.">
                 <div class="results-grid">

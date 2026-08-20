@@ -1,12 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
 :root {
-    --ink: #e8edf5;
-    --muted: #8995a8;
-    --line: #263247;
-    --panel: #121b2a;
-    --surface: #0b1320;
-    --accent: #5eead4;
-    --accent-strong: #14b8a6;
-    --danger: #ff8e8e;
+    --ink: #182027;
+    --muted: #68727a;
+    --line: #d7d9d2;
+    --panel: #f7f7f2;
+    --surface: #ffffff;
+    --accent: #1769ff;
+    --accent-strong: #ff6847;
+    --danger: #ff6847;
+    --yellow: #ff6847;
 }
 
 * {
@@ -18,8 +21,11 @@
 body {
     min-height: 100vh;
     color: var(--ink);
-    font-family: "Segoe UI", Tahoma, sans-serif;
-    background: radial-gradient(circle at 85% 0%, #193449 0, transparent 34%), #08111e;
+    font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+    background-color: #eceee8;
+    background-image: linear-gradient(rgba(24, 32, 39, .055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(24, 32, 39, .055) 1px, transparent 1px);
+    background-size: 28px 28px;
 }
 
 button,

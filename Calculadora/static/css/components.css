@@ -1,10 +1,11 @@
 calculator-card {
     display: block;
     padding: 28px;
-    margin-bottom: 24px;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: rgba(18, 27, 42, .88);
+    margin-bottom: 22px;
+    border: 2px solid var(--ink);
+    border-radius: 2px;
+    background: var(--surface);
+    box-shadow: 5px 5px 0 #c6cbc1;
 }
 
 .section-title {
@@ -16,15 +17,16 @@ calculator-card {
 
 .section-title > span {
     padding: 8px 10px;
-    border-radius: 7px;
-    color: var(--accent);
-    background: rgba(94, 234, 212, .12);
+    border-radius: 2px;
+    color: white;
+    background: var(--accent);
     font-weight: bold;
 }
 
 h2 {
     margin-bottom: 5px;
-    font-size: 23px;
+    font-size: 25px;
+    letter-spacing: -.7px;
 }
 
 .section-title p:last-child {
@@ -58,29 +60,33 @@ select {
     width: 100%;
     padding: 14px;
     outline: none;
-    border: 1px solid #304058;
-    border-radius: 9px;
-    color: #edf1fa;
-    background: var(--surface);
+    border: 2px solid #cfd3cc;
+    border-radius: 2px;
+    color: var(--ink);
+    background: #fbfcf8;
+    font-family: "DM Mono", monospace;
 }
 
 input:focus,
 select:focus {
     border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(94, 234, 212, .12);
+    box-shadow: 4px 4px 0 rgba(23, 105, 255, .18);
 }
 
 .primary-button {
     margin-top: 20px;
     padding: 14px 24px;
-    border-radius: 9px;
+    border: 2px solid var(--ink);
+    border-radius: 2px;
     color: white;
-    background: var(--accent-strong);
+    background: #1769ff;
     font-weight: bold;
+    box-shadow: 4px 4px 0 var(--ink);
 }
 
 .primary-button:hover {
-    background: #0d9488;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--ink);
 }
 
 .results-grid,
@@ -102,9 +108,9 @@ result-tile {
     display: block;
     min-width: 0;
     padding: 20px;
-    border: 1px solid #28334d;
-    border-radius: 9px;
-    background: var(--surface);
+    border: 2px solid var(--ink);
+    border-radius: 2px;
+    background: #f3f5ef;
 }
 
 result-tile span {
@@ -117,8 +123,8 @@ result-tile span {
 
 result-tile strong {
     display: block;
-    color: var(--ink);
-    font-family: Consolas, monospace;
+    color: var(--accent);
+    font-family: "DM Mono", Consolas, monospace;
     font-size: 20px;
     word-break: break-all;
 }
