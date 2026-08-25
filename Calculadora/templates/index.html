@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Motor de Conversiones y ALU</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Estilos base y modulares de tu carpeta css -->
+    <link rel="stylesheet" href="./Calculadora/static/css/base.css">
+    <link rel="stylesheet" href="./Calculadora/static/css/layout.css">
+    <link rel="stylesheet" href="./Calculadora/static/css/sidebar.css">
+    <link rel="stylesheet" href="./Calculadora/static/css/components.css">
+    <link rel="stylesheet" href="./Calculadora/static/css/conversion.css">
+    <link rel="stylesheet" href="./Calculadora/static/css/alu.css">
+    <link rel="stylesheet" href="./Calculadora/static/css/style.css">
 </head>
 
 <body>
@@ -43,7 +50,8 @@
     <p>Proyecto de Electronica Digital - Mateo Vargas</p>
 </footer>
 
-<script type="module" src="{{ url_for('static', filename='js/script.js') }}"></script>
+<!-- Carga del Web Component principal -->
+<script type="module" src="./Calculadora/static/js/script.js"></script>
 
 </body>
 </html>
